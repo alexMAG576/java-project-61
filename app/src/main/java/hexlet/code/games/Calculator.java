@@ -5,10 +5,10 @@ public class Calculator implements Game {
         return "What is the result of the expression?";
     }
     public final String[] getGameData() {
-        int lowRangeValue = 1;
-        int highRangeValue = 20;
-        int lowRangeOperators = 1;
-        int highRangeOperators = 3;
+        var lowRangeValue = 1;
+        var highRangeValue = 20;
+        var lowRangeOperators = 1;
+        var highRangeOperators = 3;
         String[] arithmeticOperators = {"/", "+", "-", "*"};
         String[] gameData = new String[2];
         int result = 0;
