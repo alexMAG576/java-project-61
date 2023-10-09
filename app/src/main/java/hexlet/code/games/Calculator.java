@@ -1,6 +1,5 @@
 package hexlet.code.games;
 
-
 public class Calculator implements Game {
     public final String getRules() {
         return "What is the result of the expression?";

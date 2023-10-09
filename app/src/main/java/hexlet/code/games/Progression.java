@@ -14,10 +14,10 @@ public class Progression implements Game {
         int firstElement = Even.getRandomNumber(lowRangeValue, highRangeValue);
         int progressionStep = Even.getRandomNumber(lowRangeValue, highRangeValue);
         int randomIntNumber = Even.getRandomNumber(firstElementProgression, endElementProgression);
-        gameData = arithmeticProgression(firstElement, progressionStep, randomIntNumber) ;
+        gameData = arithmeticProgression(firstElement, progressionStep, randomIntNumber);
         return gameData;
     }
-    public String[] arithmeticProgression(int firstElement, int progressionStep, int randomIntNumber) {
+    public static String[] arithmeticProgression(int firstElement, int progressionStep, int randomIntNumber) {
         int numberOfElements = 10;
         String[] progressionData = new String[2];
         int progression = firstElement;
