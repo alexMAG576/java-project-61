@@ -1,12 +1,12 @@
 package hexlet.code.games;
 
 public class Prime implements Game {
-    int lowRangeValue = 1;
-    int highRangeValue = 20;
     public final String getRules() {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
     public final String[] getGameData() {
+        int lowRangeValue = 1;
+        int highRangeValue = 20;
         String[] gameData = new String[2];
         int num1 = Even.getRandomNumber(lowRangeValue, highRangeValue);
         gameData[0] = Integer.toString(num1);

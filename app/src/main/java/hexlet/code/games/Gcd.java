@@ -1,12 +1,12 @@
 package hexlet.code.games;
 
 public class Gcd implements Game {
-    int lowRangeValue = 1;
-    int highRangeValue = 20;
     public final String getRules() {
         return "Find the greatest common divisor of given numbers.";
     }
     public final String[] getGameData() {
+        int lowRangeValue = 1;
+        int highRangeValue = 20;
         String[] gameData = new String[2];
         int num1 = Even.getRandomNumber(lowRangeValue, highRangeValue);
         int num2 = Even.getRandomNumber(lowRangeValue, highRangeValue);

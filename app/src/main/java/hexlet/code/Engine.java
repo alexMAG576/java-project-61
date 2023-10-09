@@ -4,7 +4,7 @@ import hexlet.code.games.Game;
 import java.util.Scanner;
 
 public class Engine {
-    public static final int gameRound = 3;
+    public static final int ROUND = 3;
 
     public static void start(Game game) {
         int countI = 0;
@@ -17,7 +17,7 @@ public class Engine {
         System.out.println("Hello, " + userName + "!");
         System.out.println(game.getRules());
 
-        while (countI < gameRound) {
+        while (countI < ROUND) {
             gameDate = game.getGameData();
             System.out.println("Question: " + gameDate[0]);
             System.out.print("Your answer: ");
@@ -29,7 +29,7 @@ public class Engine {
                 break;
             }
         }
-        if (countI == gameRound) {
+        if (countI == ROUND) {
             System.out.println("Congratulations, " + userName + "!");
             scanner.close();
         } else {
