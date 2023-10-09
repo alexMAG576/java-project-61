@@ -14,10 +14,22 @@ public class Prime implements Game {
         return gameData;
     }
     public static String getIsPrime(int num1) {
-        if (((num1 % 2) != 0)) {
-            return "yes";
-        } else {
-            return "no";
+        String answer = "";
+
+        if (num1 < 2) {
+            answer = "no";
         }
+        if (num1 == 2) {
+            answer = "yes";
+        }
+        for (int i = 2; i < num1; i++) {
+            if (num1 % i == 0) {
+                answer = "no";
+                break;
+            } else {
+                answer = "yes";
+            }
+        }
+        return answer;
     }
 }
