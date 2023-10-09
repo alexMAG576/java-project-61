@@ -14,7 +14,7 @@ public class Even implements Game {
         return gameData;
 
     }
-    public static String getIsEven (int question) {
+    public static String getIsEven(int question) {
         if (((question % 2) < 1)) {
             return "yes";
         } else {
