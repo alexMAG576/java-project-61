@@ -5,11 +5,10 @@ public class Gcd implements Game {
         return "Find the greatest common divisor of given numbers.";
     }
     public final String[] getGameData() {
-        int lowRangeValue = 1;
-        final int highRangeValue = 20;
+
         String[] gameData = new String[2];
-        int num1 = Even.getRandomNumber(lowRangeValue, highRangeValue);
-        int num2 = Even.getRandomNumber(lowRangeValue, highRangeValue);
+        int num1 = Even.questionRandom();
+        int num2 = Even.questionRandom();
         gameData[0] = num1 + " " + num2;
         gameData[1] = lookingGcd(num1, num2);
         return gameData;

@@ -6,10 +6,8 @@ public class Even implements Game {
         return "Answer 'yes' if the number is even, otherwise answer 'no'.";
     }
     public final String[] getGameData() {
-        int lowRangeValue = 1;
-        final int highRangeValue = 20;
         String[] gameData = new String[2];
-        int question = Even.getRandomNumber(lowRangeValue, highRangeValue);
+        int question = Even.questionRandom();
         gameData[0] = Integer.toString(question);
         gameData[1] = Even.getIsEven(question);
         return gameData;
@@ -25,5 +23,11 @@ public class Even implements Game {
     public static int getRandomNumber(int lowRangeValue, int highRangeValue) {
         double questionDouble = (Math.random() * highRangeValue) + lowRangeValue;
         return (int) questionDouble;
+    }
+    public static int questionRandom() {
+        int lowRangeValue = 1;
+        final int highRangeValue = 20;
+
+        return Even.getRandomNumber(lowRangeValue, highRangeValue);
     }
 }

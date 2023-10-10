@@ -6,13 +6,12 @@ public class Progression implements Game {
     }
 
     public final String[] getGameData() {
-        int lowRangeValue = 1;
-        final int highRangeValue = 20;
+
         int firstElementProgression = 0;
         final int endElementProgression = 9;
         String[] gameData;
-        int firstElement = Even.getRandomNumber(lowRangeValue, highRangeValue);
-        int progressionStep = Even.getRandomNumber(lowRangeValue, highRangeValue);
+        int firstElement = Even.questionRandom();
+        int progressionStep = Even.questionRandom();
         int randomIntNumber = Even.getRandomNumber(firstElementProgression, endElementProgression);
         gameData = arithmeticProgression(firstElement, progressionStep, randomIntNumber);
         return gameData;

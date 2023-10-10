@@ -5,10 +5,9 @@ public class Prime implements Game {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
     public final String[] getGameData() {
-        int lowRangeValue = 1;
-        final int highRangeValue = 20;
+
         String[] gameData = new String[2];
-        int num1 = Even.getRandomNumber(lowRangeValue, highRangeValue);
+        int num1 = Even.questionRandom();
         gameData[0] = Integer.toString(num1);
         gameData[1] = Prime.getIsPrime(num1);
         return gameData;
