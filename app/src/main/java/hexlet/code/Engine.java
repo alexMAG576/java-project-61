@@ -11,12 +11,10 @@ public class Engine {
         String answer = "";
         Scanner scanner = new Scanner(System.in);
         String[] gameDate = new String[2];
-
         System.out.print("May I have your name? ");
         String userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
         System.out.println(game.getRules());
-
         while (countI < ROUND) {
             gameDate = game.getGameData();
             System.out.println("Question: " + gameDate[0]);

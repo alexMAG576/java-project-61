@@ -15,7 +15,6 @@ public class Prime implements Game {
     }
     public static String getIsPrime(int num1) {
         String answer = "";
-
         if (num1 < 2) {
             answer = "no";
         }
