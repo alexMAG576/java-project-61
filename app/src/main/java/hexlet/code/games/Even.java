@@ -11,7 +11,6 @@ public class Even implements Game {
         gameData[0] = Integer.toString(question);
         gameData[1] = Even.getIsEven(question);
         return gameData;
-
     }
     public static String getIsEven(int question) {
         if (((question % 2) < 1)) {
