@@ -1,12 +1,13 @@
 package hexlet.code.games;
 
 public class Even implements Game {
+
     public final String getRules() {
         return "Answer 'yes' if the number is even, otherwise answer 'no'.";
     }
     public final String[] getGameData() {
         int lowRangeValue = 1;
-        int highRangeValue = 20;
+        final int highRangeValue = 20;
         String[] gameData = new String[2];
         int question = Even.getRandomNumber(lowRangeValue, highRangeValue);
         gameData[0] = Integer.toString(question);

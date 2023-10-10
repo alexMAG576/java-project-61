@@ -6,7 +6,7 @@ public class Gcd implements Game {
     }
     public final String[] getGameData() {
         int lowRangeValue = 1;
-        int highRangeValue = 20;
+        final int highRangeValue = 20;
         String[] gameData = new String[2];
         int num1 = Even.getRandomNumber(lowRangeValue, highRangeValue);
         int num2 = Even.getRandomNumber(lowRangeValue, highRangeValue);
