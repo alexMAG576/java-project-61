@@ -1,5 +1,7 @@
 package hexlet.code.games;
 
+import hexlet.code.Utils;
+
 public class Progression implements Game {
     public final String getRules() {
         return "What number is missing in the progression?";
@@ -10,9 +12,9 @@ public class Progression implements Game {
         int firstElementProgression = 0;
         final int endElementProgression = 9;
         String[] gameData;
-        int firstElement = Even.questionRandom();
-        int progressionStep = Even.questionRandom();
-        int randomIntNumber = Even.getRandomNumber(firstElementProgression, endElementProgression);
+        int firstElement = Utils.questionRandom();
+        int progressionStep = Utils.questionRandom();
+        int randomIntNumber = Utils.getRandomNumber(firstElementProgression, endElementProgression);
         gameData = arithmeticProgression(firstElement, progressionStep, randomIntNumber);
         return gameData;
     }

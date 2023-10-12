@@ -1,5 +1,7 @@
 package hexlet.code.games;
 
+import hexlet.code.Utils;
+
 public class Even implements Game {
 
     public final String getRules() {
@@ -7,26 +9,18 @@ public class Even implements Game {
     }
     public final String[] getGameData() {
         String[] gameData = new String[2];
-        int question = Even.questionRandom();
+        int question = Utils.questionRandom();
         gameData[0] = Integer.toString(question);
-        gameData[1] = Even.getIsEven(question);
+        boolean isEvenQuestion = isEven(question);
+        if (isEvenQuestion) {
+            gameData[1] = "yes";
+        } else {
+            gameData[1] = "no";
+        }
         return gameData;
     }
-    public static String getIsEven(int question) {
-        if (((question % 2) < 1)) {
-            return "yes";
-        } else {
-            return "no";
-        }
+    public static boolean isEven(int question) {
+        return (question % 2) < 1;
     }
-    public static int getRandomNumber(int lowRangeValue, int highRangeValue) {
-        double questionDouble = (Math.random() * highRangeValue) + lowRangeValue;
-        return (int) questionDouble;
-    }
-    public static int questionRandom() {
-        int lowRangeValue = 1;
-        final int highRangeValue = 20;
 
-        return Even.getRandomNumber(lowRangeValue, highRangeValue);
-    }
 }

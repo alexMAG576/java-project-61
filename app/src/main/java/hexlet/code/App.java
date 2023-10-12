@@ -17,9 +17,9 @@ public class App {
     public static final int GCD = 4;
     public static final int PROGRESSION = 5;
     public static final int PRIME = 6;
+    private static int userSelected;
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
@@ -29,41 +29,28 @@ public class App {
         System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
-        int userSelected = scanner.nextInt();
+        userSelected = scanner.nextInt();
         System.out.println("Welcome to the Brain Games!");
-        switch (userSelected) {
-            case EXIT:
-                System.out.println("Game over");
-                scanner.close();
-                break;
-            case GREET:
-                Greet.newUser();
-                scanner.close();
-                break;
-            case EVEN:
-                Engine.start(new Even());
-                scanner.close();
-                break;
-            case CALC:
-                Engine.start(new Calculator());
-                scanner.close();
-                break;
-            case GCD:
-                Engine.start(new Gcd());
-                scanner.close();
-                break;
-            case PROGRESSION:
-                Engine.start(new Progression());
-                scanner.close();
-                break;
-            case PRIME:
-                Engine.start(new Prime());
-                scanner.close();
-                break;
-            default:
-                System.out.println("Something was broke in App");
-                scanner.close();
-                break;
+        App.games();
+        scanner.close();
+    }
+    public static void games() {
+        if (userSelected == EXIT) {
+            System.out.println("Game over");
+        } else if (userSelected == GREET) {
+            Greet.newUser();
+        } else if (userSelected == EVEN) {
+            Engine.start(new Even());
+        } else if (userSelected == CALC) {
+            Engine.start(new Calculator());
+        } else if (userSelected == GCD) {
+            Engine.start(new Gcd());
+        } else if (userSelected == PROGRESSION) {
+            Engine.start(new Progression());
+        } else if (userSelected == PRIME) {
+            Engine.start(new Prime());
+        } else {
+            System.out.println("Something was broke in App");
         }
     }
 }
