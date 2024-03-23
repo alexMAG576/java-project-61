@@ -3,7 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Utils;
 
 import hexlet.code.Engine;
-import hexlet.code.Utils;
 
 import static hexlet.code.Engine.AMOUNT_OF_ATTEMPTS;
 public class Prime {
