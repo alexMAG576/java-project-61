@@ -1,14 +1,8 @@
 package hexlet.code;
 
 public class Utils {
-    public static int getRandomNumber(int lowRangeValue, int highRangeValue) {
-        double questionDouble = (Math.random() * highRangeValue) + lowRangeValue;
-        return (int) questionDouble;
-    }
-    public static int questionRandom() {
-        int lowRangeValue = 1;
-        final int highRangeValue = 20;
-
-        return Utils.getRandomNumber(lowRangeValue, highRangeValue);
+    // returns pseudorandom integer number between the bounds of the interval defined by the arguments
+    public static int generateNumber(int lowBoundOfInterval, int upperBoundOfInterval) {
+        return (int) Math.floor(Math.random() * (upperBoundOfInterval - lowBoundOfInterval + 1)) + lowBoundOfInterval;
     }
 }
