@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Engine {
     public static final int AMOUNT_OF_ATTEMPTS = 3;
-    public static void communicateGamer(String[][] answersAndQuestions, String gameQuestion, String gamerName) {
+    public static void communicateGamer(String[][] answersAndQuestions, String gameRules, String gamerName) {
         Scanner answerReceiver = new Scanner(System.in);
-        System.out.println(gameQuestion);
+        System.out.println(gameRules);
         for (int i = 0; i < AMOUNT_OF_ATTEMPTS; i++) {
             System.out.print("Question: " + answersAndQuestions[i][0] + "\nYou answer: ");
             String gamerAnswer = answerReceiver.next();
