@@ -14,21 +14,14 @@ public class App {
         System.out.print("1 - Greet\n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit\nYour choice: ");
         String gameNumber = gamerInput.next();
         switch (gameNumber) {
-            case "1" -> greetGamer();
-            case "2" -> Even.askQuestions(greetGamer());
-            case "3" -> Calc.askQuestions(greetGamer());
-            case "4" -> Gcd.askQuestions(greetGamer());
-            case "5" -> Progression.askQuestions(greetGamer());
-            case "6" -> Prime.askQuestions(greetGamer());
-            default -> {
-            }
+            case "0" -> System.out.println("Exit");
+            case "1" -> Cli.greetGamer();
+            case "2" -> Even.askQuestions(Cli.greetGamer());
+            case "3" -> Calc.askQuestions(Cli.greetGamer());
+            case "4" -> Gcd.askQuestions(Cli.greetGamer());
+            case "5" -> Progression.askQuestions(Cli.greetGamer());
+            case "6" -> Prime.askQuestions(Cli.greetGamer());
+            default -> throw new RuntimeException("no such operation!");
         }
-    }
-    public static String greetGamer() {
-        Scanner gamerInput = new Scanner(System.in);
-        System.out.print("\nWelcome to the Brain Games!\nMay I have your name? ");
-        String gamerName = gamerInput.next();
-        System.out.println("Hello, " + gamerName + "!");
-        return gamerName;
     }
 }
